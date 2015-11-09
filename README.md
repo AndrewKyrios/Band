@@ -1,1 +1,2 @@
-"My favorite candy is candy corn!" 
+"My favorite candy is chocolate!, 
+especially the ones that have mint filling" 
