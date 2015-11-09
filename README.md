@@ -1,2 +1,2 @@
-"My favorite candy is chocolate!, 
-especially the ones that have mint filling" 
+"My favorite candy is peanut butter m&m's'
+especially dark chocolate"
