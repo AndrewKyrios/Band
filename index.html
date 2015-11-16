@@ -1,1 +1,70 @@
 <!-- This is where the index.html will go -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Team Challenge</title>
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+
+  <!-- include libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div class="container" ng-app="myApp" ng-controller="MyCtrl"> 
+    <h1> Sign up<h1>
+      <h3> Our service is fun and awesome but you have to be over 13 to join!<h3>
+  <div class="alert alert-success" ng-show="show_alert" ng-bind="success">
+      <strong>Success!</strong> 
+  </div>
+    <form name="userSignUp">
+       <div class="form-group">
+        <div>
+        <label>Email:</label>
+        <!-- bind the search term to the controller -->
+        <input type="email" name="email" placeholder="Your email" ng-model="email" class="form-control" required></input>
+        <p id = "emailError"ng-show="!userSignUp.email.$pristine && userSignUp.email.$invalid"> Enter a valid email</p>
+      </div>
+        <label> First Name:</label>
+        <!-- bind the search term to the controller -->
+        <input type="text" name="first_name" placeholder="Your first name" ng-model="first_name" class="form-control" required ng-minlength="6" ng-maxlength="15"></input>
+        <p id="nameError" ng-show="!userSignUp.first_name.$pristine && userSignUp.first_name.$invalid"> Enter a valid first name</p>
+      </div>
+      <div>
+        <label> Last Name:</label>
+        <!-- bind the search term to the controller -->
+        <input type="text" name="last_name" placeholder="Your last name" ng-model="last_name" class="form-control" required ng-minlength="2" ng-maxlength="15"></input>
+        <p ng-show="!userSignUp.last_name.$pristine && userSignUp.last_name.$invalid"> We need to know your last name</p>
+      </div>
+      <div>
+        <label> Birthdate:</label>
+        <!-- bind the search term to the controller -->
+        <input type="text" name="birthdate" placeholder="Your birthdate" ng-model="birthdate" class="form-control" required ><!--ng-minlength="1" ng-maxlength="7"--></input>
+        <!--<p ng-show="!userSignUp.birthdate.$invalid && !user.SignUp.$pristine"> Sorry, but you have to be over 13 to join</p>-->
+      </div>
+      <div>
+        <label> Password:</label>
+        <input type="password" name="pw1" id="pw1" ng-model="pw1" class="form-control" ng-required></input>
+        <p ng-show="!userSignUp.password.$pristine && userSignUp.password.$invalid"> Enter a valid password (min of 8 characters)</p>
+      </div>
+      <div>
+        <label> Confirm Password:</label>
+        <input type="password" name="pw2" id="pw2" ng-model="pw2" class="form-control" required></input>
+        <p ng-show="!userSignUp.confirmation.$pristine && userSignUp.confirmation.$invalid"> Sorry, passwords don't match. Try again</p>
+      </div>
+       <div class="button-group">
+        <!-- call method on click -->
+        <button class="btn btn-default" ng-click="reset();" type="reset">Reset</button>
+        <!-- call method on click -->
+        <button class="btn btn-primary" ng-click="signUp();" ng-disabled="userSignUp.$invalid" type="submit">Sign Me Up!</button>
+      </div>
+    </div>
+    </form>
+</body>
+</html>
