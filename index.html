@@ -20,7 +20,7 @@
   <div class="container" ng-app="myApp" ng-controller="MyCtrl"> 
     <h1> Sign up<h1>
       <h3> Our service is fun and awesome but you have to be over 13 to join!<h3>
-  <div class="alert alert-success" ng-show="show_alert" ng-bind="success">
+  <div class="alert alert-success" ng-show="success">
       <strong>Success!</strong> 
   </div>
     <form name="userSignUp">
@@ -50,13 +50,13 @@
       </div>
       <div>
         <label> Password:</label>
-        <input type="password" name="pw1" id="pw1" ng-model="pw1" class="form-control" ng-required></input>
+        <input type="password" name="pw1" id="pw1" ng-model="pw1" class="form-control" ng-required ng-bind="pw1"></input>
         <p ng-show="!userSignUp.password.$pristine && userSignUp.password.$invalid"> Enter a valid password (min of 8 characters)</p>
       </div>
       <div>
         <label> Confirm Password:</label>
-        <input type="password" name="pw2" id="pw2" ng-model="pw2" class="form-control" required></input>
-        <p ng-show="!userSignUp.confirmation.$pristine && userSignUp.confirmation.$invalid"> Sorry, passwords don't match. Try again</p>
+        <input type="password" name="pw2" id="pw2" ng-model="pw2" class="form-control" required ng-bind="pw2"></input>
+        <p ng-show="pw1!=pw2"> Sorry, passwords don't match. Try again</p>
       </div>
        <div class="button-group">
         <!-- call method on click -->
