@@ -24,4 +24,9 @@ $scope.signUp = function(userSignUp){
    alert('success');
  };
 
+
 }])
+
+
+
+
