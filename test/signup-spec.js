@@ -2,13 +2,14 @@
  'use strict';
  
 describe('Sign-up form page', function(){
+    beforeEach(function(){
+        browser.get('http://localhost:8000/Rocket-Team');
+ 
+    });
 
     //tests title page
     it('should have a title', function(){
-        browser.get('http://localhost:8000/Desktop/Rocket-Team');
-
-        expect( browser.getTitle() ).toEqual('Team Challenge');
-
+        expect(browser.getTitle() ).toEqual('Team Challenge');
         browser.getTitle().then(function(response){
             console.log(response);
         });
@@ -59,4 +60,3 @@ describe('Sign-up form page', function(){
     	expect(browser.getCurrentUrl()).toEqual(loginURL);
   });
 });
-})
