@@ -1,1 +1,70 @@
-<!--Styling-->
+#review-intro{
+  padding-bottom: 50px;
+}
+header{
+    background-image: none;
+}
+/*generalize this styling*/
+h1, h2, h6{
+	text-align:center;
+}
+
+#image{
+	border:1px solid black;
+}
+
+span.glyphicon-play {
+    font-size: 1.2em;
+}
+
+#play{
+	  height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+    background: none;
+}
+
+/*change background-color*/
+footer{
+    border-top:solid;
+    border-bottom-width: 3px;
+    border-top-color:#d87e28;
+    background-color:#afb3c2;
+    font-size: 12px;
+    padding-left: 1em;
+}
+#play-container{
+  padding-bottom: 50px;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+  border: none;
+}
+/*add media query for desktop screens*/
+@media screen and (min-width:560px){
+  #icons{
+    padding-left: 150px;
+  }
+}
+
+#nav{
+  padding-top: 25px;
+}
+#myNavbar a:hover{
+  text-decoration: underline;
+  background-color: none;
+}
+#review-intro{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
