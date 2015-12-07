@@ -16,8 +16,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="js/app.js"></script>
 </head>
-<body>
-  <div class="container" ng-app="myApp" ng-controller="MyCtrl"> 
+<body ng-app="myApp" ng-controller="MyCtrl">
+  <div class="container" > 
     <h1> Sign up! <h1>
       <h2> Our service is fun and awesome but you have to be over 13 to join! <h2>
       <h3><h3>
@@ -30,18 +30,18 @@
         <label>Email:</label>
         <!-- bind the search term to the controller -->
         <input type="email" name="email" placeholder="Your email" ng-model="email" class="form-control" required></input>
-        <p id = "emailError"ng-show="!userSignUp.email.$pristine && userSignUp.email.$invalid"> Enter a valid email</p>
+        <p id ="emailError"ng-show="!userSignUp.email.$pristine && userSignUp.email.$invalid"> Enter a valid email</p>
       </div>
         <label> First Name:</label>
         <!-- bind the search term to the controller -->
         <input type="text" name="first_name" placeholder="Your first name" ng-model="first_name" class="form-control" required ng-minlength="6" ng-maxlength="15"></input>
-        <p id="nameError" ng-show="!userSignUp.first_name.$pristine && userSignUp.first_name.$invalid"> Enter a valid first name</p>
+        <p id="first_nameError" ng-show="!userSignUp.first_name.$pristine && userSignUp.first_name.$invalid"> Enter a valid first name</p>
       </div>
       <div>
         <label> Last Name:</label>
         <!-- bind the search term to the controller -->
         <input type="text" name="last_name" placeholder="Your last name" ng-model="last_name" class="form-control" required ng-minlength="2" ng-maxlength="15"></input>
-        <p ng-show="!userSignUp.last_name.$pristine && userSignUp.last_name.$invalid"> We need to know your last name</p>
+        <p id="last_nameError" ng-show="!userSignUp.last_name.$pristine && userSignUp.last_name.$invalid"> We need to know your last name</p>
       </div>
       <div>
         <label> Birthdate:</label>
@@ -57,7 +57,7 @@
       <div>
         <label> Confirm Password:</label>
         <input type="password" name="pw2" id="pw2" ng-model="pw2" class="form-control" required ng-bind="pw2"></input>
-        <p ng-show="pw1!=pw2"> Sorry, passwords don't match. Try again</p>
+        <p id="passwordError" ng-show="pw1!=pw2"> Sorry, passwords don't match. Try again</p>
       </div>
        <div class="button-group">
         <!-- call method on click -->
