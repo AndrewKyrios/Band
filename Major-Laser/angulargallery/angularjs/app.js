@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('example366', ['ngAnimate', 'ngTouch'])
+angular.module('slideshow-gallery', ['ngAnimate', 'ngTouch'])
   .controller('MainCtrl', function ($scope) {
  
     // Set of Photos
