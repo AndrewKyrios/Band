@@ -15,9 +15,9 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 			templateUrl: 'partials/tour.html',
 			controller: 'tourCtrl'
 		})	
-		.state('gallery', {
-		 	url: '/gallery',
-		 	templateUrl: 'partials/gallery.html',
+		.state('about', {
+		 	url: '/about',
+		 	templateUrl: 'partials/about.html',
 		 	controller: 'galleryCtrl'
 		})
 		
@@ -33,29 +33,51 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 
  //    };
 
-    $scope.play= function(){
-    	var tracks = {};
-    	var request = BASE_URL + '/playlists' + '?' +'client_id='+ CLIENT_ID;
-    	$http.get(request).then(function (response) {
-    	  var index = 0;
-          tracks = response.data; //save results to available model
-          console.log(tracks);
+  //   $scope.play= function(){
+  //   	var tracks = {};
+  //   	var request = BASE_URL + '/playlists' + '?' +'client_id='+ CLIENT_ID;
+  //   	$http.get(request).then(function (response) {
+  //   	  var index = 0;
+  //         tracks = response.data; //save results to available model
+  //         console.log(tracks);
 
-        });
+  //       });
 
-    	SC.initialize({
-  		client_id: CLIENT_ID
+  //   	SC.initialize({
+  // 		client_id: CLIENT_ID
   		
-		});
+		// });
 		// or add a json with songs' ids!
-    	for(var i = 0; i < tracks.length; i++){
-    		var track = tracks[i];
-    		SC.stream('/tracks/' +  track.id).then(function(player){
-  				player.play();
-			});	
-    	}
+   //  	for(var i = 0; i < tracks.length; i++){
+   //  		var track = tracks[i];
+   //  		SC.stream('/tracks/' +  track.id).then(function(player){
+  	// 			player.play();
+			// });	
+   //  	}
+    	(function(){
+                    var DEFAULT = 50;
+                    var widgetIframe = document.getElementById('sc-widget'),
+                     widget = SC.Widget(widgetIframe);
+
+                    widget.bind(SC.Widget.Events.READY, function() {
+                    widget.bind(SC.Widget.Events.PLAY, function() {
+        // get information about currently playing sound
+                    widget.getCurrentSound(function(currentSound) {
+                    console.log('sound ' + currentSound.get('') + 'began to play');
+                    });
+                });
+            // get current level of volume
+                widget.getVolume(function(volume) {
+                console.log('current volume value is ' + volume);
+            });
+             widget.setVolume(50);
+      // set new volume level
+      // get the value of the current position
+            });
+
+        }());
 		
-	};
+	//};
 
 }])
 .controller('tourCtrl', ['$scope', '$http', function($scope, $http) {

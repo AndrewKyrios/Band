@@ -1,11 +1,37 @@
+body{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+    body{
+        font-size:22px;  
+    }
+    header h1{
+      font-size: 125px;
+      font-weight: bolder;
+      color: rgb(252, 253, 56);
+    }
+     #icons{
+    padding-left: 150px;
+  }
+
+}
 #review-intro{
   padding-bottom: 50px;
+  padding-top: 40px;
 }
-header{
-    background-image: none;
+#bio{
+  padding-top: 40px;
 }
+
+
+/*
+#banner{
+    background-image:url("../img/maxresdefault.jpg");
+}*/
+
 /*generalize this styling*/
-h1, h2, h6{
+h1, h2, h6, #review-intro{
 	text-align:center;
 }
 
@@ -13,8 +39,8 @@ h1, h2, h6{
 	border:1px solid black;
 }
 
-span.glyphicon-play {
-    font-size: 1.2em;
+span.glyphicon, span.glyphicon-play-circle{
+    font-size: 3.4em;
 }
 
 #play{
@@ -33,38 +59,48 @@ footer{
     border-bottom-width: 3px;
     border-top-color:#d87e28;
     background-color:#afb3c2;
-    font-size: 12px;
     padding-left: 1em;
+    font-size: 16px;
 }
 #play-container{
-  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
-.btn-circle {
-  width: 30px;
-  height: 30px;
+a.btn-circle {
+  width: 65px;
+  height: 65px;
   text-align: center;
-  padding: 6px 0;
+  padding: 6px;
   font-size: 12px;
+  /*1.42*/
   line-height: 1.42;
   border-radius: 15px;
   border: none;
 }
-/*add media query for desktop screens*/
-@media screen and (min-width:560px){
-  #icons{
-    padding-left: 150px;
-  }
+a.btn:hover , a.btn-default:hover, a.btn-circle:hover {
+  background-color: transparent;
+  border-color: transparent;
 }
+/*add media query for desktop screens*/
 
+a.btn:active , a.btn-default:active, a.btn-circle:active {
+  background-color: rgba(255,280 , 0, 0.3);
+  border-color: transparent;
+}
+ 
 #nav{
   padding-top: 25px;
 }
-#myNavbar a:hover{
+#myNavbar li > a:hover{
   text-decoration: underline;
   background-color: none;
 }
-#review-intro{
-  padding-top: 40px;
-  padding-bottom: 20px;
+#social_media{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
+#widget, #sc-widget{
+  padding-top: 40px;
+  /*padding-left: 100px;*/
+}
