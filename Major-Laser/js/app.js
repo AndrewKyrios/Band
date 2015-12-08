@@ -3,6 +3,7 @@ var BASE_URL = 'https://api.soundcloud.com'; //website we fetch information from
 var CLIENT_ID = '6264914141bfe065e89766a38d704dfd' //application ID for requests
 
 angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
+
 .config(function($stateProvider){
 	$stateProvider
 		.state('home', {
@@ -12,16 +13,14 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 		})
 		 .state('tour', {
 		 	url: '/tour',
-			templateUrl: 'partials/tour.html',
-			controller: 'tourCtrl'
+			templateUrl:'partials/tour.html',
+			controller: 'ConcertsCtrl'
 		})	
-		.state('about', {
-		 	url: '/about',
-		 	templateUrl: 'partials/about.html',
+		.state('gallery', {
+		 	url: '/gallery',
+		 	templateUrl: 'partials/gallery.html',
 		 	controller: 'galleryCtrl'
-		})
-		
-
+		})		
 })
 .controller('homeCtrl', ['$scope', '$http', function($scope, $http) {
 
@@ -80,9 +79,17 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 	//};
 
 }])
-.controller('tourCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('ConcertsCtrl', ['$scope', '$http', function($scope, $http) {
+    $scope.sortBy = 'date';
+
+   $http.get('data/concert.json').then(function(response){
+        console.log(response.data)
+        $scope.concerts = response.data;
+   });
 
 }])
 .controller('galleryCtrl', ['$scope', '$http', function($scope, $http) {
 
 }])
+
+

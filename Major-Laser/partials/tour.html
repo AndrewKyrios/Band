@@ -1,1 +1,26 @@
+<!-- <body class="container" ng-app="ConcertsApp"> -->
+	<div ng-controller="ConcertsCtrl">
+		<h1>Tours</h1>
+		<p class="lead"></p>
+        <img src ="img/lasershow.jpg" width = "400" height = "400" align = "top" id="concert">
+		<p> </p>
+		<center><em>"In order for the light to shine so brightly, the darkness must be present." </em></center> 
 
+		<p id="searchBar">Search: <input type="text" placeholder="Type in a city" ng-model="query"></p>
+		<div class = "container" id = "theTable" >
+		<table class="center">
+			<tr>
+				<th><a href="" ng-click="sortBy = 'date'">Date</a></th>
+				<th><a href="" ng-click="sortBy = 'title'">Location</a></th> 
+				<th>Venue</th>
+				<th>Tickets</th>
+			</tr>
+			<tr ng-repeat="concert in concerts | orderBy: sortBy | filter:query">
+				<td>{{concert.date | date:'MMM dd yyyy'}}</td>
+				<td>{{concert.title}}</td> 
+				 <td>{{concert.venue}}</td>
+				<td><a href = "{{concert.tickets}}"> Buy Tickets!</a></td>
+			</tr>
+		</table>
+	</div>
+	

@@ -2,105 +2,169 @@ body{
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
 }
+
+header h1{
+  font-weight: bolder;
+  font-size: 80px;
+  color: rgb(252, 253, 56);
+}
 @media screen and (min-width: 768px) {
     body{
-        font-size:22px;  
+      font-size:22px;  
     }
     header h1{
       font-size: 125px;
-      font-weight: bolder;
-      color: rgb(252, 253, 56);
     }
      #icons{
-    padding-left: 150px;
+      padding-left: 150px;
+    }
+    #review-intro{
+      padding-bottom: 30px;
+      padding-top: 20px;
+    }
+    #bio{
+      padding-top: 40px;
+    }
+    #nav{
+      padding-top: 25px;
+    }
+    #social_media{
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    #connect{
+      padding-bottom: 40px;
+    }
+}
+
+.nav>li>a:hover {
+  text-decoration: none;
+  color: red; 
+  background-color: none;
+
   }
 
+#title{
+  margin-bottom: 10px;
 }
-#review-intro{
-  padding-bottom: 50px;
-  padding-top: 40px;
-}
-#bio{
-  padding-top: 40px;
-}
-
-
-/*
-#banner{
-    background-image:url("../img/maxresdefault.jpg");
-}*/
-
 /*generalize this styling*/
 h1, h2, h6, #review-intro{
 	text-align:center;
 }
 
-#image{
-	border:1px solid black;
-}
-
 span.glyphicon, span.glyphicon-play-circle{
-    font-size: 3.4em;
+  font-size: 3.4em;
 }
 
 #play{
-	  height:20px; 
-    width:100px; 
-    margin: -20px -50px; 
-    position:relative;
-    top:50%; 
-    left:50%;
-    background: none;
+  height:20px; 
+  width:100px; 
+  margin: -20px -50px; 
+  position:relative;
+  top:50%; 
+  left:50%;
+  background: none;
 }
 
 /*change background-color*/
 footer{
-    border-top:solid;
-    border-bottom-width: 3px;
-    border-top-color:#d87e28;
-    background-color:#afb3c2;
-    padding-left: 1em;
-    font-size: 16px;
+  border-top:solid;
+  border-bottom-width: 3px;
+  border-top-color:#d87e28;
+  background-color:#afb3c2;
+  padding-left: 1em;
+  font-size: 16px;
 }
+
 #play-container{
   padding-top: 50px;
   padding-bottom: 100px;
 }
 a.btn-circle {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   padding: 6px;
   font-size: 12px;
-  /*1.42*/
   line-height: 1.42;
-  border-radius: 15px;
+  border-radius: 30px;
   border: none;
 }
-a.btn:hover , a.btn-default:hover, a.btn-circle:hover {
+.bottom-links a.btn:hover ,.bottom-links a.btn-default:hover, .bottom-links a.btn-circle:hover {
   background-color: transparent;
   border-color: transparent;
 }
-/*add media query for desktop screens*/
+.bottom-links a.btn:hover i , .bottom-links a.btn-default:hover i, .bottom-links a.btn-circle:hover i{
+  color: rgba(51, 51, 51, 1.0);
+  
+}
+.bottom-links a.btn i , .bottom-links a.btn-default i, .bottom-links a.btn-circle i{
+  color: rgba(51, 51, 51, 0.40);
+}
 
-a.btn:active , a.btn-default:active, a.btn-circle:active {
-  background-color: rgba(255,280 , 0, 0.3);
-  border-color: transparent;
-}
- 
-#nav{
-  padding-top: 25px;
-}
-#myNavbar li > a:hover{
-  text-decoration: underline;
+.bottom-links a.btn:active , .bottom-links a.btn-default:active, .bottom-links a.btn-circle:active {
   background-color: none;
-}
-#social_media{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  border-color: none;
 }
 
 #widget, #sc-widget{
   padding-top: 40px;
-  /*padding-left: 100px;*/
+  margin-bottom: 30px;
+}
+.hovergallery img{ 
+-webkit-transform:scale(0.8); /*Webkit: Scale down image to 0.8x original size*/ 
+-moz-transform:scale(0.8); /*Mozilla scale version*/ 
+-o-transform:scale(0.8); /*Opera scale version*/ 
+-webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/ 
+-moz-transition-duration: 0.5s; /*Mozilla duration version*/ 
+-o-transition-duration: 0.5s; /*Opera duration version*/ 
+opacity: 0.7; /*initial opacity of images*/ 
+margin: 0 10px 5px 0; /*margin between images*/ 
+} 
+
+.hovergallery img:hover{ 
+-webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/ 
+-moz-transform:scale(1.1); /*Mozilla scale version*/ 
+-o-transform:scale(1.1); /*Opera scale version*/ 
+box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around image*/ 
+-webkit-box-shadow:0px 0px 30px gray; /*Safari shadow version*/ 
+-moz-box-shadow:0px 0px 30px gray; /*Mozilla shadow version*/ 
+opacity: 1; 
+} 
+#searchBar {
+  text-align: right;
+} 
+
+table {
+  text-align: center;
+  padding-bottom: 20px;
+} 
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+.center td {padding-bottom: 20px;} 
+
+@media screen and (min-width: 425px) {
+  .center td {padding-right: 25px;}
+  .center th {padding-right: 25px;}
+}
+
+@media screen and (min-width: 768px) {
+  .center td {padding-right: 75px;}
+  .center th {padding-right: 75px;}
+}
+
+@media screen and (min-width: 992px) {
+.center td {padding-right: 150px;} 
+.center th {padding-right: 150px;} 
+}
+
+#concert {
+  width: 100%;
+  height: 400px;
+  background-image: url('img/lasershow.jpg');
+  background-size: 100% 100%
 }
