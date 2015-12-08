@@ -1,6 +1,8 @@
 body{
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
+  background-color: black;
+  color:white;
 }
 
 header h1{
@@ -10,46 +12,56 @@ header h1{
 }
 @media screen and (min-width: 768px) {
     body{
-      font-size:22px;  
+      font-size:18px;  
     }
     header h1{
       font-size: 125px;
     }
      #icons{
-      padding-left: 150px;
+      margin-left: 190px;
     }
-    #review-intro{
+    /*#review-intro{
       padding-bottom: 30px;
       padding-top: 20px;
-    }
+    }*/
     #bio{
-      padding-top: 40px;
+      margin-top: 40px;
     }
     #nav{
       padding-top: 25px;
-    }
-    #social_media{
-      padding-top: 50px;
-      padding-bottom: 50px;
     }
     #connect{
       padding-bottom: 40px;
     }
 }
-
+#icons{
+      margin-top: 25px;
+    }
 .nav>li>a:hover {
   text-decoration: none;
   color: red; 
   background-color: none;
 
   }
+  #review-intro{
+      padding-bottom: 10px;
+      padding-top: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
 
 #title{
   margin-bottom: 10px;
 }
+#social_media{
+      /*padding-top: 50px;*/
+      padding-bottom: 50px;
+    }
+
 /*generalize this styling*/
 h1, h2, h6, #review-intro{
 	text-align:center;
+  color:rgb(66, 249, 67);
 }
 
 span.glyphicon, span.glyphicon-play-circle{
@@ -65,15 +77,19 @@ span.glyphicon, span.glyphicon-play-circle{
   left:50%;
   background: none;
 }
-
+#bio{
+      margin-top: 40px;
+}
 /*change background-color*/
 footer{
   border-top:solid;
   border-bottom-width: 3px;
-  border-top-color:#d87e28;
-  background-color:#afb3c2;
+  /*border-top-color:#d87e28;*/
+  background-color:rgb(220,220,220);
   padding-left: 1em;
   font-size: 16px;
+  color:rgb(229,128,28);
+  width: 100%;
 }
 
 #play-container{
@@ -94,12 +110,19 @@ a.btn-circle {
   background-color: transparent;
   border-color: transparent;
 }
+.bottom-links a.btn ,.bottom-links a.btn-default, .bottom-links a.btn-circle {
+  background-color: black;
+  border-color: transparent;
+}
+
 .bottom-links a.btn:hover i , .bottom-links a.btn-default:hover i, .bottom-links a.btn-circle:hover i{
-  color: rgba(51, 51, 51, 1.0);
+  /*color: rgba(51, 51, 51, 1.0);*/
+  color: blue;
   
 }
 .bottom-links a.btn i , .bottom-links a.btn-default i, .bottom-links a.btn-circle i{
-  color: rgba(51, 51, 51, 0.40);
+  /*color: rgba(51, 51, 51, 0.40);*/
+  color:red;
 }
 
 .bottom-links a.btn:active , .bottom-links a.btn-default:active, .bottom-links a.btn-circle:active {
