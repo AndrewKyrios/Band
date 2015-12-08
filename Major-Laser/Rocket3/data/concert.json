@@ -1,0 +1,86 @@
+[
+	{
+		"title":"Manila, Philipines",
+		"date":"2015-12-10",
+		"venue":"Valkyrie Nightclub at The Palace",
+		"tickets":"http://valkyrie.thepalacemanila.com/"
+	},
+	{
+		"title":"Jakarta, Indonesia",
+		"date":"2015-12-11",
+		"venue":"Djkarta Warehouse Project",
+		"tickets":"http://djakartawarehouse.com/tickets/"
+	},
+	{
+		"title":"Hong Kong, Hong Kong",
+		"date":"2015-12-12",
+		"venue":"Asia World Expo",
+		"tickets":"http://www.hkticketing.com/"
+	},
+	{
+		"title":"Tokyo, Japan",
+		"date":"2015-12-13",
+		"venue":"Studio Coast",
+		"tickets":"http://smash-jpn.com/live/?id=2409"
+	},
+	{
+		"title":"Kingston, Jamaica",
+		"date":"2015-12-18",
+		"venue":"Mas Camp",
+		"tickets":"https://touchstoneticketing.com/ttvuevents.html?ary=YW5ldmVudF4xMzQ="
+	},
+	{
+		"title":"Punta Cana, Dominican Republic",
+		"date":"2015-12-19",
+		"venue":"Electric Paradise",
+		"tickets":"http://66.128.53.44/ElectricParadise/event_detail.aspx"
+	},
+	{
+		"title":"Port of Spain, Trinidad And Tobago",
+		"date":"2015-12-20",
+		"venue":"Sunset Festival",
+		"tickets":"https://www.ticketgateway.com/event/view/sunset-festival-ft-major-lazer"
+	},
+	{
+		"title":"Benito Juárez, Mexico",
+		"date":"2016-01-29",
+		"venue":"Pepsi Center",
+		"tickets":"http://www.ticketmaster.com.mx/major-lazer-mexico-distrito-federal-29-01-2016/event/14004F54DB8C6C2D?artistid=2175478&majorcatid=10001&minorcatid=201&REFERRAL_ID=tmfeedbuyat97249&wt.mc_id=aff_BUYAT_97249&camefrom=CFC_BUYAT_97249&utm_medium=affiliate&utm_source=97249-Bandsintown"
+	},
+	{
+		"title":"Monterrey, Mexico",
+		"date":"2016-01-30",
+		"venue":"Palestino Libanes",
+		"tickets":"http://eventos.hot-ticket.net/ordertickets.asp?p=199&backurl=%2Feventperformances%2Easp%3Fevt%3D121%26SearchMonth%3D%26monthsubmit%3D%26SearchText%3D%26Go%2Ex%3D%26Go%2Ey%3D%26pg%3D%26spg%3D1%26c%3D"
+	},
+	{
+		"title":"Dover, DE",
+		"date":"2016-06-16",
+		"venue":"Firefly Music Festival",
+		"tickets":"http://www.bandsintown.com/event/10931953-major-lazer-dover-dover-international-speedway-2016?artist=Major+Lazer&came_from=193"
+	},
+	{
+		"title":"Dover, DE",
+		"date":"2016-06-17",
+		"venue":"Firefly Music Festival",
+		"tickets":"http://www.bandsintown.com/event/10931953-major-lazer-dover-dover-international-speedway-2016?artist=Major+Lazer&came_from=193"
+	},
+	{
+		"title":"Dover, DE",
+		"date":"2016-06-18",
+		"venue":"Firefly Music Festival",
+		"tickets":"http://www.bandsintown.com/event/10931953-major-lazer-dover-dover-international-speedway-2016?artist=Major+Lazer&came_from=193"
+	},
+	{
+		"title":"Dover, DE",
+		"date":"2016-06-19",
+		"venue":"Firefly Music Festival",
+		"tickets":"http://www.bandsintown.com/event/10931953-major-lazer-dover-dover-international-speedway-2016?artist=Major+Lazer&came_from=193"
+	},
+	{
+		"title":"Dover, DE",
+		"date":"2016-06-20",
+		"venue":"Firefly Music Festival",
+		"tickets":"http://www.bandsintown.com/event/10931953-major-lazer-dover-dover-international-speedway-2016?artist=Major+Lazer&came_from=193"
+	}
+]

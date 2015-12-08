@@ -1,0 +1,31 @@
+#searchBar {
+	text-align: right;
+} 
+
+table {
+	text-align: center;
+	padding-bottom: 20px;
+} 
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+.center td {padding-bottom: 20px;} 
+
+@media screen and (min-width: 425px) {
+	.center td {padding-right: 25px;}
+	.center th {padding-right: 25px;}
+}
+
+
+@media screen and (min-width: 768px) {
+	.center td {padding-right: 75px;}
+	.center th {padding-right: 75px;}
+}
+
+@media screen and (min-width: 992px) {
+.center td {padding-right: 150px;} 
+.center th {padding-right: 150px;} 
+}
