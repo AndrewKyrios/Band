@@ -6,34 +6,10 @@ body{
 }
 
 header h1{
-/*  font-weight: bolder;
+  font-weight: bolder;
   font-size: 80px;
-  color: rgb(252, 253, 56);*/
-  box-sizing: content-box;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
   color: rgb(252, 253, 56);
-  text-decoration: none;
-  text-align: none;
-  text-transform: uppercase;
-  text-indent: 0px;
-  text-overflor: clip;
-  letter-spacing: 10px;
-  white-space: normal;
-  word-spacing: 0px;
-  text-shadow: rgb(238, 238, 238) 4px 4px 0px,
-                rgb(112, 112, 112) 6px 6px 0px;
-  margin: 0px auto;
-  outline: none;
-  border: none;
-  font: 82px 'Oswald', 'Helvetica', sans-serif;
+
 }
 @media screen and (min-width: 768px) {
     body{
