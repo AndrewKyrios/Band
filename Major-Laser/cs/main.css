@@ -11,6 +11,10 @@ body{
   background-color: black;
   border-color: black;
 }
+a{
+  background-color: black;
+  border-color: black;
+}
 span .icon-bar{
   color:red;
 }
@@ -28,7 +32,7 @@ header h1{
       font-size: 125px;
     }
      #icons{
-      margin-left: 190px;
+      margin-left: 50px;
     }
     /*#review-intro{
       padding-bottom: 30px;
@@ -47,12 +51,27 @@ header h1{
 #icons{
       margin-top: 25px;
     }
-.nav>li>a:hover {
+  .nav>li>a:hover {
   text-decoration: none;
-  color: red; 
+  color:rgb(64,224,208); 
   background-color: black;
 
   }
+  .nav>li>a:active {
+  text-decoration: none;
+  color:orange; 
+  background-color: black;
+  }
+/*  how to get rid of a button's shadow when it shows the current page?
+*/  /*.nav>li>a:visited{
+  text-decoration: none;
+  color:red; 
+  background-color: black;
+  }*/
+  a{
+    color: orange;
+  }
+ 
   #review-intro{
       padding-bottom: 10px;
       padding-top: 10px;
@@ -71,11 +90,7 @@ header h1{
 /*generalize this styling*/
 h1, h2, h6, #review-intro{
 	text-align:center;
-  color:rgb(66, 249, 67);
-}
-
-span.glyphicon, span.glyphicon-play-circle{
-  font-size: 3.4em;
+  color:rgb(167, 204, 0);
 }
 
 #play{
@@ -95,10 +110,10 @@ footer{
   border-top:solid;
   border-bottom-width: 3px;
   /*border-top-color:#d87e28;*/
-  background-color:rgb(220,220,220);
+  background-color:rgb(169,169,169);
   padding-left: 1em;
   font-size: 16px;
-  color:rgb(229,128,28);
+  color:rgb(220,20,60);
   width: 100%;
 }
 
@@ -127,12 +142,12 @@ a.btn-circle {
 
 .bottom-links a.btn:hover i , .bottom-links a.btn-default:hover i, .bottom-links a.btn-circle:hover i{
   /*color: rgba(51, 51, 51, 1.0);*/
-  color: blue;
+  color: rgb(64,224,208);
   
 }
 .bottom-links a.btn i , .bottom-links a.btn-default i, .bottom-links a.btn-circle i{
   /*color: rgba(51, 51, 51, 0.40);*/
-  color:red;
+  color:orange;
 }
 
 .bottom-links a.btn:active , .bottom-links a.btn-default:active, .bottom-links a.btn-circle:active {
@@ -169,7 +184,7 @@ opacity: 1;
 } 
 
 table {
-  /* text-align: center; */
+  text-align: center;
   padding-bottom: 20px;
 } 
 
@@ -180,49 +195,29 @@ table.center {
 
 .center td {padding-bottom: 20px;} 
 
-th {
-  color: red;
-}
-
-input {
-  color: blue;
-}
-
-em {
-  color: yellow;
-}
-
-@media screen and (min-width: 400px) {
-  .center td {padding-right: 50px;}
-  .center th {padding-right: 50px;}
-body {
-  font-size: 14px;
-}
-#concert {
-  width: 100%;
-  height: 200px;
-  background-image: url('img/lasershow.jpg');
-  background-size: 100% 100%
-}
-
+@media screen and (min-width: 425px) {
+  .center td {padding-right: 25px;}
+  .center th {padding-right: 25px;}
 }
 
 @media screen and (min-width: 768px) {
-  .center td {padding-right: 100px;}
-  .center th {padding-right: 100px;}
-body {
-    font-size: 16px;
+  .center td {padding-right: 75px;}
+  .center th {padding-right: 75px;}
 }
+
+@media screen and (min-width: 992px) {
+.center td {padding-right: 150px;} 
+.center th {padding-right: 150px;} 
+}
+
 #concert {
   width: 100%;
   height: 400px;
   background-image: url('img/lasershow.jpg');
   background-size: 100% 100%
 }
-}
-
-@media screen and (min-width: 992px) {
-.center td {padding-right: 100px;} 
-.center th {padding-right: 100px;} 
-
+@media screen and (min-width: 900px) {
+  #icons{
+    margin-left: 150px;
+  }
 }
