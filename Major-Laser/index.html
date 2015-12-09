@@ -8,6 +8,7 @@
   <title>Major Lazer's Official Website</title>
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="cs/main.css">
@@ -19,16 +20,16 @@
   </head>
   <body>
     <!-- ng-controller="NavBarCtrl" -->
-    <nav class="navbar navbar">
+    <nav class="navbar navbar-default" ng-controller="NavbarCtrl">
     <div class="container">
-        <div class="container navbar-header" id="nav">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <div class="navbar-header" id="nav">
+        <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true" data-toggle="collapse" data-target="#myNavbar" ng-click="menuCollapsed = !menuCollapsed">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="MyNavbar">
+    <div class="collapse navbar-collapse" collapse="menuCollapsed" id="MyNavbar">
       <ul class="nav nav-justified">
         <li><a href="#">Home</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -44,6 +45,15 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
+    <!--footer does not stay as footer>-->
+     <!--  <div id="bgfix">
+    <div id="main">
+        <div id="leftbg"></div>
+        <div id="rightbg"></div>
+    </div>
+</div>
+ -->
+
     <footer>
     	<div class="container">
             <div class="row">
