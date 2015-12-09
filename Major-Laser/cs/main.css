@@ -169,7 +169,7 @@ opacity: 1;
 } 
 
 table {
-  text-align: center;
+  /* text-align: center; */
   padding-bottom: 20px;
 } 
 
@@ -180,24 +180,49 @@ table.center {
 
 .center td {padding-bottom: 20px;} 
 
-@media screen and (min-width: 425px) {
-  .center td {padding-right: 25px;}
-  .center th {padding-right: 25px;}
+th {
+  color: red;
+}
+
+input {
+  color: blue;
+}
+
+em {
+  color: yellow;
+}
+
+@media screen and (min-width: 400px) {
+  .center td {padding-right: 50px;}
+  .center th {padding-right: 50px;}
+body {
+  font-size: 14px;
+}
+#concert {
+  width: 100%;
+  height: 200px;
+  background-image: url('img/lasershow.jpg');
+  background-size: 100% 100%
+}
+
 }
 
 @media screen and (min-width: 768px) {
-  .center td {padding-right: 75px;}
-  .center th {padding-right: 75px;}
+  .center td {padding-right: 100px;}
+  .center th {padding-right: 100px;}
+body {
+    font-size: 16px;
 }
-
-@media screen and (min-width: 992px) {
-.center td {padding-right: 150px;} 
-.center th {padding-right: 150px;} 
-}
-
 #concert {
   width: 100%;
   height: 400px;
   background-image: url('img/lasershow.jpg');
   background-size: 100% 100%
+}
+}
+
+@media screen and (min-width: 992px) {
+.center td {padding-right: 100px;} 
+.center th {padding-right: 100px;} 
+
 }
