@@ -91,5 +91,8 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 .controller('galleryCtrl', ['$scope', '$http', function($scope, $http) {
 
 }])
+.controller('NavbarCtrl', ['$scope', '$http', function($scope, $http) {
+   $scope.menuCollapsed = true;
+}])
 
 

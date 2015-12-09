@@ -4,6 +4,16 @@ body{
   background-color: black;
   color:white;
 }
+/*.navbar-toggle {
+  background-color:gray;
+}*/
+.navbar-default{
+  background-color: black;
+  border-color: black;
+}
+span .icon-bar{
+  color:red;
+}
 
 header h1{
   font-weight: bolder;
@@ -40,7 +50,7 @@ header h1{
 .nav>li>a:hover {
   text-decoration: none;
   color: red; 
-  background-color: none;
+  background-color: black;
 
   }
   #review-intro{
