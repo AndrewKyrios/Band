@@ -51,6 +51,11 @@ header h1{
 #icons{
       margin-top: 25px;
     }
+  .nav>li>a:focus{
+  text-decoration: underline;
+  color:rgb(64,224,208); 
+  background-color: black;
+  }
   .nav>li>a:hover {
   text-decoration: none;
   color:rgb(64,224,208); 
@@ -62,12 +67,7 @@ header h1{
   color:orange; 
   background-color: black;
   }
-/*  how to get rid of a button's shadow when it shows the current page?
-*/  /*.nav>li>a:visited{
-  text-decoration: none;
-  color:red; 
-  background-color: black;
-  }*/
+
   a{
     color: orange;
   }

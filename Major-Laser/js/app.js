@@ -77,6 +77,8 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
         }());
 		
 	//};
+     $scope.navbarCollapsed = true;
+
 
 }])
 .controller('ConcertsCtrl', ['$scope', '$http', function($scope, $http) {
