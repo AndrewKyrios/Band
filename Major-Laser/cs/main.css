@@ -182,9 +182,27 @@ box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around imag
 -moz-box-shadow:0px 0px 30px gray; /*Mozilla shadow version*/ 
 opacity: 1; 
 } 
+
 #searchBar {
   text-align: right;
+  color: orange;
 } 
+
+th {
+  color: orange;
+}
+
+input {
+    color: blue;
+}
+
+em {
+    color: yellow;
+}
+
+td a {
+  color: rgb(220,20,60);
+}
 
 table {
   text-align: center;
@@ -196,17 +214,78 @@ table.center {
     margin-right:auto;
   }
 
-.center td {padding-bottom: 20px;} 
+.center td {
+    padding-bottom: 20px;
+} 
+
+@media screen and (min-width: 0px) {
+  .center td {padding-right: 50px;}
+  .center th {padding-right: 50px;}
+  
+  body {
+    font-size: 14px;
+  }
+  
+  #concert {
+    width: 100%;
+    height: 200px;
+    background-image: url('img/lasershow.jpg');
+    background-size: 100% 100%
+  }
+
+  #searchBar {
+    padding-right: 60px;
+  }
+}
 
 @media screen and (min-width: 425px) {
   .center td {padding-right: 25px;}
   .center th {padding-right: 25px;}
+
+  #searchBar {
+      padding-right: 35px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .center td {padding-right: 75px;}
   .center th {padding-right: 75px;}
+
+  body {
+    font-size: 16px;
+  }
+
+  #concert {
+     width: 100%;
+     height: 400px;
+     background-image: url('img/lasershow.jpg');
+     background-size: 100% 100%
+  }
+
+  #searchBar {
+    padding-right: 85px;
+  }
 }
+
+/* font gets bigger at 768px; */
+/*@media screen and (min-width: 768px) {
+  .center td {padding-right: 100px;}
+  .center th {padding-right: 100px;}
+body {
+    font-size: 16px;
+}
+ #concert {
+   width: 100%;
+   height: 400px;
+   background-image: url('img/lasershow.jpg');
+   background-size: 100% 100%
+  }
+}*/
+
+@media screen and (min-width: 992px) {
+.center td {padding-right: 100px;} 
+.center th {padding-right: 100px;}
+} 
 
 @media screen and (min-width: 992px) {
 .center td {padding-right: 150px;} 
@@ -218,11 +297,5 @@ table.center {
   height: 400px;
   background-image: url('img/lasershow.jpg');
   background-size: 100% 100%
-}
-
-#icons{
-  margin-left: auto;
-  margin-right: auto;
-  display: table;
 }
 
