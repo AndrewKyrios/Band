@@ -2,7 +2,7 @@
 var BASE_URL = 'https://api.soundcloud.com'; //website we fetch information from
 var CLIENT_ID = '6264914141bfe065e89766a38d704dfd' //application ID for requests
 
-angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
+angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
 .config(function($stateProvider){
 	$stateProvider
@@ -77,7 +77,6 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
         }());
 		
 	//};
-     $scope.navbarCollapsed = true;
 
 
 }])
@@ -94,7 +93,7 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router'])
 
 }])
 .controller('NavbarCtrl', ['$scope', '$http', function($scope, $http) {
-   $scope.menuCollapsed = true;
+   $scope.navbarCollapsed = true;
 }])
 
 

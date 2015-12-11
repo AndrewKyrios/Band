@@ -53,6 +53,7 @@ header h1{
       margin-top: 25px;
     }
   .nav>li>a:focus{
+  font-size: 18px;
   text-decoration: underline;
   color:rgb(64,224,208); 
   background-color: black;
