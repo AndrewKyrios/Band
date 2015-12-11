@@ -2,7 +2,7 @@
 var BASE_URL = 'https://api.soundcloud.com'; //website we fetch information from
 var CLIENT_ID = '6264914141bfe065e89766a38d704dfd' //application ID for requests
 
-angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
+angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.grid'])
 
 .config(function($stateProvider){
 	$stateProvider
@@ -88,11 +88,21 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 }])
 .controller('ConcertsCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.sortBy = 'date';
+    $scope.columns = [{ field: 'date' }, { field: 'title' }, { field: 'venue' }, { field: 'tickets' }];
+    $scope.gridOptions = {
+    enableSorting: true,
+    columnDefs: $scope.columns,
+    onRegisterApi: function( gridApi ) { 
+      $scope.gridApi = gridApi;
+      var cellTemplate = 'ui-grid/selectionRowHeader';   // you could use your own template here
+    }
+  };
 
    $http.get('data/concert.json').then(function(response){
         console.log(response.data)
-        $scope.concerts = response.data;
+        $scope.gridOptions.data = response.data;
    });
+
 
 }])
 .controller('galleryCtrl', ['$scope', '$http', function($scope, $http) {

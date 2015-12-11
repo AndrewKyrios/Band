@@ -7,7 +7,7 @@
 		<center><em>"In order for the light to shine so brightly, the darkness must be present." </em></center> 
 		<p></p>
 		<p id="searchBar">Search: <input type="text" placeholder="Type in a city" ng-model="query"></p>
-		<div class = "container" id = "theTable" >
+		<!-- <div class = "container" id = "theTable" >
 		<table class="center">
 			<tr>
 				<th><a href="" ng-click="sortBy = 'date'">
@@ -33,5 +33,9 @@
 				</a></td>
 			</tr>
 		</table>
+	</div> -->
+
+	<div class="container">
+		<div id="grid1" ui-grid="gridOptions" class="ui.grid"></div>
 	</div>
 	
