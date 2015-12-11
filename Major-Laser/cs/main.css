@@ -92,7 +92,7 @@ header h1{
 /*generalize this styling*/
 h1, h2, h6, #review-intro{
 	text-align:center;
-  color:rgb(167, 204, 0);
+  	color:rgb(167, 204, 0);
 }
 
 #play{
@@ -219,8 +219,10 @@ table.center {
   background-image: url('img/lasershow.jpg');
   background-size: 100% 100%
 }
-@media screen and (min-width: 900px) {
-  #icons{
-    margin-left: 150px;
-  }
+
+#icons{
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
 }
+

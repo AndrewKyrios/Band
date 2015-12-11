@@ -20,7 +20,13 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 		 	url: '/gallery',
 		 	templateUrl: 'partials/gallery.html',
 		 	controller: 'galleryCtrl'
-		})		
+		})
+    .state('default', {
+      url: '/',
+      templateUrl: 'partials/home.html',
+      controller: 'homeCtrl'
+    })
+    
 })
 .controller('homeCtrl', ['$scope', '$http', function($scope, $http) {
 
