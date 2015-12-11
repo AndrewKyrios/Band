@@ -1,3 +1,4 @@
+/*Hola!!*/
 body{
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
@@ -297,5 +298,10 @@ body {
   height: 400px;
   background-image: url('img/lasershow.jpg');
   background-size: 100% 100%
+}
+#icons{
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
 }
 
