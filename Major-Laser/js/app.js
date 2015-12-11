@@ -2,7 +2,7 @@
 var BASE_URL = 'https://api.soundcloud.com'; //website we fetch information from
 var CLIENT_ID = '6264914141bfe065e89766a38d704dfd' //application ID for requests
 
-angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.grid'])
+angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
 .config(function($stateProvider){
 	$stateProvider
@@ -26,87 +26,38 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.
       templateUrl: 'partials/home.html',
       controller: 'homeCtrl'
     })
-    
+    .state("otherwise", { 
+      url : '/', 
+      templateUrl: 'partials/home.html',
+      controller: 'homeCtrl'
+  })
 })
 .controller('homeCtrl', ['$scope', '$http', function($scope, $http) {
+	 (function(){
+      var DEFAULT = 50;
+      var widgetIframe = document.getElementById('sc-widget'),
+        widget = SC.Widget(widgetIframe);
+        widget.bind(SC.Widget.Events.READY, function() {
+        widget.bind(SC.Widget.Events.PLAY, function() {
+        widget.getCurrentSound(function(currentSound) {
+        console.log('sound ' + currentSound.get('') + 'began to play');
+        });
+      });
+      widget.getVolume(function(volume) {
+        console.log('current volume value is ' + volume);
+      });
+      widget.setVolume(50);
+      });
 
-	 // + '&q=' + "Major Lazer"; //build the RESTful request
- //      $scope.getTracks = function() {
- //      $http.get(request).then(function (response) {
- //          $scope.tracks = response.data; //save results to available model
- //        });
-
- //    };
-
-  //   $scope.play= function(){
-  //   	var tracks = {};
-  //   	var request = BASE_URL + '/playlists' + '?' +'client_id='+ CLIENT_ID;
-  //   	$http.get(request).then(function (response) {
-  //   	  var index = 0;
-  //         tracks = response.data; //save results to available model
-  //         console.log(tracks);
-
-  //       });
-
-  //   	SC.initialize({
-  // 		client_id: CLIENT_ID
-  		
-		// });
-		// or add a json with songs' ids!
-   //  	for(var i = 0; i < tracks.length; i++){
-   //  		var track = tracks[i];
-   //  		SC.stream('/tracks/' +  track.id).then(function(player){
-  	// 			player.play();
-			// });	
-   //  	}
-    	(function(){
-                    var DEFAULT = 50;
-                    var widgetIframe = document.getElementById('sc-widget'),
-                     widget = SC.Widget(widgetIframe);
-
-                    widget.bind(SC.Widget.Events.READY, function() {
-                    widget.bind(SC.Widget.Events.PLAY, function() {
-        // get information about currently playing sound
-                    widget.getCurrentSound(function(currentSound) {
-                    console.log('sound ' + currentSound.get('') + 'began to play');
-                    });
-                });
-            // get current level of volume
-                widget.getVolume(function(volume) {
-                console.log('current volume value is ' + volume);
-            });
-             widget.setVolume(50);
-      // set new volume level
-      // get the value of the current position
-            });
-
-        }());
-		
-	//};
-
-
+  }());		
 }])
 .controller('ConcertsCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.sortBy = 'date';
-    $scope.columns = [{ field: 'date' }, { field: 'title' }, { field: 'venue' }, { field: 'tickets' }];
-    $scope.gridOptions = {
-    enableSorting: true,
-    columnDefs: $scope.columns,
-    onRegisterApi: function( gridApi ) { 
-      $scope.gridApi = gridApi;
-      var cellTemplate = 'ui-grid/selectionRowHeader';   // you could use your own template here
-    }
-  };
-
-   $http.get('data/concert.json').then(function(response){
-        console.log(response.data)
-        $scope.gridOptions.data = response.data;
+    $http.get('data/concert.json').then(function(response){
+    $scope.concerts = response.data;
    });
-
-
 }])
 .controller('galleryCtrl', ['$scope', '$http', function($scope, $http) {
-
 }])
 .controller('NavbarCtrl', ['$scope', '$http', function($scope, $http) {
    $scope.navbarCollapsed = true;

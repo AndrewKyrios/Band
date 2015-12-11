@@ -4,15 +4,14 @@
 		<p class="lead"></p>
         <img src ="img/lasershow.jpg" width = "400" height = "400" align = "top" id="concert">
 		<p></p>
-		<center><em>"In order for the light to shine so brightly, the darkness must be present." </em></center> 
+		<center><em class="names">"In order for the light to shine so brightly, the darkness must be present." </em></center> 
 		<p></p>
 		<p id="searchBar">Search: <input type="text" placeholder="Type in a city" ng-model="query"></p>
-		<!-- <div class = "container" id = "theTable" >
+		<div class = "container" id = "theTable" >
 		<table class="center">
 			<tr>
-				<th><a href="" ng-click="sortBy = 'date'">
-				  		<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> Date
-				</a></th>
+				<th><span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span><a href="" ng-click="sortBy = 'date'">
+				  		 Date</a></th>
 
 				<th><a href="" ng-click="sortBy = 'title'">
 						<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> Location
@@ -23,9 +22,9 @@
 				<th>Tickets</th>
 			</tr>
 			<tr ng-repeat="concert in concerts | orderBy: sortBy | filter:query">
-				<td>{{concert.date | date:'MMM dd yyyy'}}</td>
+				<td id="date">{{concert.date | date:'MMM dd yyyy'}}</td>
 				<td>{{concert.title}}</td> 
-				 <td>{{concert.venue}}</td>
+				<td>{{concert.venue}}</td>
 				<td><a href = "{{concert.tickets}}"> 
 					<button type="button" class="btn btn-default btn-default">
 						Buy Tickets!
@@ -33,9 +32,5 @@
 				</a></td>
 			</tr>
 		</table>
-	</div> -->
-
-	<div class="container">
-		<div id="grid1" ui-grid="gridOptions" class="ui.grid"></div>
 	</div>
 	
