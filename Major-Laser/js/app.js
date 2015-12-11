@@ -4,10 +4,11 @@ var CLIENT_ID = '6264914141bfe065e89766a38d704dfd' //application ID for requests
 
 angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 
-.config(function($stateProvider){
+.config(function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider.otherwise('/home');
 	$stateProvider
 		.state('home', {
-			url: '/', 
+			url: '/home', 
 			templateUrl: 'partials/home.html',
 			controller: 'homeCtrl'
 		})
@@ -21,16 +22,6 @@ angular.module('MajorLazerApp', ['ngSanitize', 'ui.router', 'ui.bootstrap'])
 		 	templateUrl: 'partials/gallery.html',
 		 	controller: 'galleryCtrl'
 		})
-    .state('default', {
-      url: '/',
-      templateUrl: 'partials/home.html',
-      controller: 'homeCtrl'
-    })
-    .state("otherwise", { 
-      url : '/', 
-      templateUrl: 'partials/home.html',
-      controller: 'homeCtrl'
-  })
 })
 .controller('homeCtrl', ['$scope', '$http', function($scope, $http) {
 	 (function(){
