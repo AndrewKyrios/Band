@@ -10,16 +10,27 @@
 		<div class = "container" id = "theTable" >
 		<table class="center">
 			<tr>
-				<th><a href="" ng-click="sortBy = 'date'">Date</a></th>
-				<th><a href="" ng-click="sortBy = 'title'">Location</a></th> 
+				<th><a href="" ng-click="sortBy = 'date'">
+				  		<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> Date
+				</a></th>
+
+				<th><a href="" ng-click="sortBy = 'title'">
+						<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> Location
+				</a></th>
+				
 				<th>Venue</th>
+				
 				<th>Tickets</th>
 			</tr>
 			<tr ng-repeat="concert in concerts | orderBy: sortBy | filter:query">
 				<td>{{concert.date | date:'MMM dd yyyy'}}</td>
 				<td>{{concert.title}}</td> 
 				 <td>{{concert.venue}}</td>
-				<td><a href = "{{concert.tickets}}"> Buy Tickets!</a></td>
+				<td><a href = "{{concert.tickets}}"> 
+					<button type="button" class="btn btn-default btn-default">
+						Buy Tickets!
+					</button>
+				</a></td>
 			</tr>
 		</table>
 	</div>
